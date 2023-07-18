@@ -11,19 +11,20 @@ for (let i=1; i<=256; i++) {
    
 
 }
-const box = document.querySelector('.block')
 const boxes = document.querySelectorAll('.block')
-boxes.forEach(div => {div.addEventListener("mouseover", mouseOver)});
-boxes.forEach(div => {div.addEventListener("mouseout", mouseOut)});
-
-function mouseOver() {
-    box.style.background = "red";
-}
-
-function mouseOut() {
-    box.style.background = "black";
-}
-
-for (let x=1;x<=256;x++) {
+for (let box of boxes) {
+    function mouseOver() {
+        box.style.background = "red"
+    };
     
-}
+    function mouseOut() {
+        box.style.background = "black"
+    };
+    box.addEventListener("mouseover", mouseOver);
+    box.addEventListener("mouseout", mouseOut);
+};
+
+
+//boxes.forEach(div => {div.addEventListener("mouseover", mouseOver)});
+//boxes.forEach(div => {div.addEventListener("mouseout", mouseOut)});
+
