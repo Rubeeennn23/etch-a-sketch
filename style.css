@@ -16,6 +16,7 @@ body {
     height: 480px;
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 480px;
     flex-direction: row;
     justify-content: center;
     align-items: start;
